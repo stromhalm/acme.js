@@ -1244,7 +1244,7 @@ ACME._prepRequest = function (me, options) {
 			);
 		}
 		// TODO validate csr signature?
-		var _csr = CSR._info(options.csr);
+		/*var _csr = CSR._info(options.csr);
 		options.domains = options.domains || _csr.altnames;
 		_csr.altnames = _csr.altnames || [];
 		if (
@@ -1261,7 +1261,7 @@ ACME._prepRequest = function (me, options) {
 					'certificate subject (commonName) does not match first altname (SAN)'
 				)
 			);
-		}
+		}*/
 		if (!(options.domains && options.domains.length)) {
 			return Promise.reject(
 				new Error(
